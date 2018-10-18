@@ -1,0 +1,44 @@
+project:
+  name: mintmex-215818
+  provider: gcloud
+  runtime: python37
+  default_stage: 'dev' # Set the default stage used. Default is dev
+  region: europe-west1  # Overwrite the default region used. Default is us-east-1
+  creds: server_account.json
+  api_prefix: custom-api-name # optional Use a custom name for the API Gateway API
+  memory_size: 128 # Overwrite the default memory size. Default is 1024
+  timeout: 10 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
+
+package: # Optional deployment packaging configuration
+  include: # Specify the directories and files which should be included in the deployment package
+    - src/**
+    - handler.js
+  exclude: # Specify the directories and files which should be excluded in the deployment package
+    - .git/**
+    - .travis.yml
+  exclude_dev_dependencies: true # Config if Serverless should automatically exclude dev dependencies in the deployment package. Defaults to true
+  individually: false # Enables individual packaging for each function. If true you must provide package for each function. Defaults to false
+
+functions:
+  testingFunc:
+    handler: hello
+    handler_path: example/ # The file and module for this specific function.
+    deploy_name: helloFUNC # optional, Deployed Lambda name
+    description: hello world
+    memory_size: 512 # memorySize for this specific function.
+    runtime: python37 # Runtime for this specific function. Overrides the default which is set on the provider level
+    timeout: 10 # Timeout for this specific function.  Overrides the default set above.
+    merge_env: false
+    tags: # Function specific tags
+      foo: bar
+    package:
+      include: # Specify the directories and files which should be included in the deployment package for this specific function.
+        - src/**
+        - handler.js
+      exclude: # Specify the directories and files which should be excluded in the deployment package for this specific function.
+        - .git/**
+        - .travis.yml
+      individually: true # Enables individual packaging for specific function. If true you must provide package for each function. Defaults to false
+    events: # The Events that trigger this Function
+      - http: # This creates an API Gateway HTTP endpoint which can be used to trigger this function.  Learn more in "events/apigateway"
+          path: hello_world # Path for this endpoint
