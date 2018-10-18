@@ -8,8 +8,8 @@
 different platforms. 
 *Only Google Cloud is supported at the moment*
 
-It is easily extensible by plugins. You can a plugin for additional functionality 
-or even write a wrapper for a new service provider!
+It is easily extensible by plugins. You can write a plugin for additional functionality 
+or a wrapper for a new service provider!
 
 ## Features
 -   Supports multiple serverless providers.
@@ -18,6 +18,7 @@ or even write a wrapper for a new service provider!
 -   Wide range of available aspects to configure.
 -   Deploy all functions at once or by one - you choose!
 -   *WIP*: Possible to invoke functions locally 
+
 ## Usage
 ### Installation
 ```

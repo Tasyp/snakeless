@@ -2,9 +2,9 @@ import setuptools
 
 PROJECT = "snakeless"
 
-VERSION = "0.1.0"
+VERSION = "0.1.2"
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -12,10 +12,10 @@ setuptools.setup(
     version=VERSION,
     author="German Ivanov",
     author_email="germivanov@gmail.com",
-    description="Create Google Cloud based serverless apps with joy",
+    description="Write true serverless apps with joy",
     license="MIT",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type='text/markdown',
     url="https://github.com/tasyp/snakeless",
     install_requires=[
         "cliff",

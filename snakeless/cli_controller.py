@@ -7,7 +7,7 @@ class SnakelessCli(App):
     def __init__(self):
         super().__init__(
             description="Snakeless CLI",
-            version="0.1.0",
+            version="0.1.2",
             command_manager=CommandManager("snakeless.cli"),
             deferred_help=True,
         )
