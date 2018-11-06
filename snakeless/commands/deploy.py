@@ -4,7 +4,7 @@ import fs
 from cliff.command import Command
 
 from ..constants import CURRENT_DIR
-from ..actions import DeployerMixin, ConfigLoaderMixin
+from ..mixins import DeployerMixin, ConfigLoaderMixin
 
 
 class Deploy(Command, DeployerMixin, ConfigLoaderMixin):
