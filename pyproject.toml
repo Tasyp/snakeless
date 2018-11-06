@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snakeless"
-version = "0.2.0"
+version = "0.2.1"
 description = "Write true serverless apps with joy"
 authors = ["German Ivanov <germivanov@gmail.com>"]
 license = "MIT"

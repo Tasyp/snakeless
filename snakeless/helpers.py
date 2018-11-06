@@ -38,20 +38,20 @@ def check_config_existence(root_fs, file_name="snakeless.yml"):
 @lru_cache()
 def get_providers():
     providers = {}
-    for entry_points in iter_entry_points("snakeless.providers"):
+    for entry_point in iter_entry_points("snakeless.providers"):
         providers[entry_point.name] = entry_point.load()
     return providers
 
 @lru_cache()
 def get_schemas():
     schemas = {}
-    for entry_points in iter_entry_points("snakeless.schemas"):
+    for entry_point in iter_entry_points("snakeless.schemas"):
         schemas[entry_point.name] = entry_point.load()
     return schemas
 
 def get_provider(provider_name, config):
     providers = get_providers() 
-    for entry_points in iter_entry_points("snakeless.providers"):
+    for entry_point in iter_entry_points("snakeless.providers"):
         providers[entry_point.name] = entry_point.load()
     return providers[provider_name](config)
 
