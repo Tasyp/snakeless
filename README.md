@@ -2,15 +2,17 @@
 
 > Write true serverless apps with joy
 
-## Description
+#Description
 
 **Snakeless** is a tool that tries to simplify deployment of serverless apps on
 different platforms. 
-*Only Google Cloud is supported at the moment*
 
 It is easily extensible by plugins. You can write a plugin for additional functionality 
-or a wrapper for a new service provider!
+or a wrapper for new service provider!
 
+Plugins for providers:
+- [Google Cloud](https://github.com/Tasyp/snakeless-provider-gcloud)
+- Write your own!
 ## Features
 -   Supports multiple serverless providers.
 -   Loads `.env` Automatically. 
@@ -20,20 +22,18 @@ or a wrapper for a new service provider!
 -   *WIP*: Possible to invoke functions locally 
 
 ## Usage
+
+We use [poetry](https://github.com/sdispater/poetry) for dependency management and publishing.
+
 ### Installation
 ```
-$ pipenv install snakeless
+$ pip install snakeless 
 ```
 
 ### Development
 
 ```
-WIP
-```
-
-### Production
-```
-WIP
+$ poetry instal 
 ```
 
 ### Testing
