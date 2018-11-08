@@ -2,7 +2,7 @@
 
 > Write true serverless apps with joy
 
-#Description
+## Description
 
 **Snakeless** is a tool that tries to simplify deployment of serverless apps on
 different platforms. 
