@@ -3,7 +3,7 @@ import fs
 
 class BaseProvider(object):
     def __init__(self, config):
-        raise NotImplemented
+        self.config = config
 
     def get_func_data(self, func_name, func_data_key, default=None):
         return self.config["functions"][func_name].get(func_data_key, default)
@@ -49,11 +49,11 @@ class BaseProvider(object):
                 env_variables = {
                     key: value
                     for key, value in (
-                        line.strip().split("=", maxsplit=2)
+                        line.strip().split("=", maxsplit=1)
                         for line in env_file
                     )
                 }
                 return env_variables
 
     def deploy_function(self, func_name, spinner):
-        raise NotImplemented
+        raise NotImplementedError
