@@ -12,7 +12,8 @@ or a wrapper for new service provider!
 
 Plugins for providers:
 - [Google Cloud](https://github.com/Tasyp/snakeless-provider-gcloud)
-- Write your own!
+- Feel free to write your own!
+
 ## Features
 -   Supports multiple serverless providers.
 -   Loads `.env` Automatically. 
