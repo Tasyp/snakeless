@@ -36,7 +36,7 @@ class Check(Command):
                 parse_config(root_fs)
             except fs.errors.ResourceNotFound:
                 raise CommandFailure("Config does not anymore exist.")
-            except SchemaError as exc:
+            except SchemaError:
                 raise CommandFailure("Config validation failed")
             else:
                 spinner.succeed("Config is valid.")

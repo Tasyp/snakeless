@@ -19,8 +19,7 @@ Plugins for providers:
 -   Loads `.env` Automatically. 
 -   Configuration is done in one simple `.yaml` file
 -   Wide range of available aspects to configure.
--   Deploy all functions at once or by one - you choose!
--   *WIP*: Possible to invoke functions locally 
+-   Deploy all functions at once or one by one - you choose!
 
 ## Usage
 
