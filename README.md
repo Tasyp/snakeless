@@ -1,6 +1,6 @@
 # Snakeless [![image](https://img.shields.io/pypi/v/snakeless.svg)](https://python.org/pypi/snakeless) [![image](https://img.shields.io/pypi/l/snakeless.svg)](https://python.org/pypi/snakeless) [![image](https://img.shields.io/pypi/pyversions/snakeless.svg)](https://python.org/pypi/snakeless)
 
-> Write true serverless apps with joy
+> Write truly serverless apps with joy
 
 ## Description
 
